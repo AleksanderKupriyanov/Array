@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int[] array = {3, 4, -15, -14, 34, 6, 90, 7, -2, -45};
+        int[] array = {45, 78, -15, 12, 34, 6, 90, 7, -2, -45};
         int i, max = array[0], min = array[0];
 
         //Задание 1.
@@ -55,8 +55,26 @@ public class Main {
         }
         //Ищем числа идущие по порядку
         for (i = 0; i < array.length - 1; i++) {
-            if (array[i] == (array[i + 1] - 1)) System.out.println(array[i] + " " + array[i + 1]);
+            if (array[i] == (array[i + 1] - 1))
+                System.out.println("Числа в порядке возрастания: " + array[i] + " " + array[i + 1]);
         }
         //Задание 5.
+        array = new int[]{195, 639, 0, 132, 438, 7, 591, 732, 936, 745};
+        for (i = 0; i < array.length; i++) {
+            z = array[i];
+            t = 0;
+            for (j = 0; j < array.length; j++) {
+                while (z > 0) {
+                    t = t * 10 + (z % 10);
+                    z = z / 10;
+                }
+                for (j = 0; j < array.length; j++) {
+                    if (array[i] / 10 > 0) if (t == array[j]) {
+                        System.out.println("числа= " + array[i] + " " + array[j]);
+                    }
+
+                }
+            }
+        }
     }
 }
